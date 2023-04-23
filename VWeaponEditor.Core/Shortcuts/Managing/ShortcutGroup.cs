@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using SharpPadV2.Core.Shortcuts.Inputs;
-using SharpPadV2.Core.Shortcuts.Serialization;
-using SharpPadV2.Core.Utils;
+using VWeaponEditor.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Serialization;
+using VWeaponEditor.Core.Utils;
 
-namespace SharpPadV2.Core.Shortcuts.Managing {
+namespace VWeaponEditor.Core.Shortcuts.Managing {
     /// <summary>
     /// A collection of shortcuts
     /// </summary>

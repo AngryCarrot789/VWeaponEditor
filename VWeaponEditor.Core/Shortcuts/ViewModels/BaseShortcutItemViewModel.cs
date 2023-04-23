@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.Shortcuts.ViewModels {
+namespace VWeaponEditor.Core.Shortcuts.ViewModels {
     /// <summary>
     /// A base view model for shortcuts and shortcut groups
     /// </summary>

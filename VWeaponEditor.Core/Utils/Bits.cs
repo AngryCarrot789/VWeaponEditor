@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public static class Bits {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool IsSet(int value, int mask) {

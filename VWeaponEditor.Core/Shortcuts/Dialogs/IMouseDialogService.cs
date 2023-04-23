@@ -1,6 +1,6 @@
-using SharpPadV2.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Inputs;
 
-namespace SharpPadV2.Core.Shortcuts.Dialogs {
+namespace VWeaponEditor.Core.Shortcuts.Dialogs {
     public interface IMouseDialogService {
         MouseStroke? ShowGetMouseStrokeDialog();
     }

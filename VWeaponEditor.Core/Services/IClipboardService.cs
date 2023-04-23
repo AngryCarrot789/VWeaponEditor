@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.Services {
+namespace VWeaponEditor.Core.Services {
     public interface IClipboardService {
         string ReadableText { get; set; }
 

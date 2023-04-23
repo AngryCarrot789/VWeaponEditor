@@ -1,6 +1,6 @@
 using System;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public static class Maths {
         public static double Map(double input, double inA, double inB, double outA, double outB) {
             return outA + ((outB - outA) / (inB - inA) * (input - inA));

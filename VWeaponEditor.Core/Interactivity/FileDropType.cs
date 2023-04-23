@@ -1,6 +1,6 @@
 using System;
 
-namespace SharpPadV2.Core.Interactivity {
+namespace VWeaponEditor.Core.Interactivity {
     [Flags]
     public enum FileDropType {
         None,

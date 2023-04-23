@@ -1,6 +1,6 @@
 using System;
 
-namespace SharpPadV2.Core.Actions {
+namespace VWeaponEditor.Core.Actions {
     /// <summary>
     /// A helper attribute for registering actions. <see cref="ActionManager.SearchAndRegisterActions(ActionManager)"/> will 
     /// search all types for this attribute and use it to register a new instance of the action

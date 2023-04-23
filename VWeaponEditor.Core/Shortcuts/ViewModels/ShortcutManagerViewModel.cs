@@ -1,6 +1,6 @@
-using SharpPadV2.Core.Shortcuts.Managing;
+using VWeaponEditor.Core.Shortcuts.Managing;
 
-namespace SharpPadV2.Core.Shortcuts.ViewModels {
+namespace VWeaponEditor.Core.Shortcuts.ViewModels {
     public class ShortcutManagerViewModel : BaseViewModel {
         private ShortcutGroupViewModel root;
         public ShortcutGroupViewModel Root {

@@ -1,6 +1,6 @@
-using SharpPadV2.Core.Utils;
+using VWeaponEditor.Core.Utils;
 
-namespace SharpPadV2.Core.Actions {
+namespace VWeaponEditor.Core.Actions {
     public readonly struct Presentation {
         private readonly int flags;
 

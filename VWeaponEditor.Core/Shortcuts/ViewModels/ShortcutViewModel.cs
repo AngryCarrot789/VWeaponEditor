@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
-using SharpPadV2.Core.AdvancedContextService;
-using SharpPadV2.Core.AdvancedContextService.Base;
-using SharpPadV2.Core.AdvancedContextService.Commands;
-using SharpPadV2.Core.Shortcuts.Inputs;
-using SharpPadV2.Core.Shortcuts.Managing;
+using VWeaponEditor.Core.AdvancedContextService;
+using VWeaponEditor.Core.AdvancedContextService.Base;
+using VWeaponEditor.Core.AdvancedContextService.Commands;
+using VWeaponEditor.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Managing;
 
-namespace SharpPadV2.Core.Shortcuts.ViewModels {
+namespace VWeaponEditor.Core.Shortcuts.ViewModels {
     public class ShortcutViewModel : BaseShortcutItemViewModel, IContextProvider {
         public GroupedShortcut TheShortcut { get; }
 

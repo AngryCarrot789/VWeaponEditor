@@ -1,6 +1,6 @@
-using SharpPadV2.Core.AdvancedContextService.Base;
+using VWeaponEditor.Core.AdvancedContextService.Base;
 
-namespace SharpPadV2.Core.AdvancedContextService {
+namespace VWeaponEditor.Core.AdvancedContextService {
     /// <summary>
     /// A separator element between menu items
     /// </summary>

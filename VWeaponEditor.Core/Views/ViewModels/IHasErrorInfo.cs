@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SharpPadV2.Core.Views.ViewModels {
+namespace VWeaponEditor.Core.Views.ViewModels {
     public interface IHasErrorInfo {
         /// <summary>
         /// A dictionary of errors currently present. The default behaviour is that a view is prevented from

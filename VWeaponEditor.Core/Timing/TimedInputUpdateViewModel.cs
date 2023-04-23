@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Input;
 
-namespace SharpPadV2.Core.Timing {
+namespace VWeaponEditor.Core.Timing {
     public class TimedInputUpdateViewModel  : BaseViewModel, IDisposable {
         private string inputText;
         public string InputText {

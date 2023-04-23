@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SharpPadV2.Core.AdvancedContextService.Base {
+namespace VWeaponEditor.Core.AdvancedContextService.Base {
     public class ContextEntry : BaseInteractableEntry {
         public IEnumerable<IContextEntry> Children { get; }
 

@@ -1,9 +1,6 @@
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using SharpPadV2.Core.Actions.Contexts;
+using VWeaponEditor.Core.Actions.Contexts;
 
-namespace SharpPadV2.Core.AdvancedContextService.Base {
+namespace VWeaponEditor.Core.AdvancedContextService.Base {
     public class BaseInteractableEntry : BaseViewModel, IContextEntry {
         private readonly DataContext context;
 

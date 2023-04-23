@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.TextEditor {
+namespace VWeaponEditor.Core.TextEditor {
     public interface ITextEditor {
         int CaretIndex { get; set; }
         int SelectionLength { get; set; }

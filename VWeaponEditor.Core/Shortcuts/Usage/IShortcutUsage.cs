@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using SharpPadV2.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Inputs;
 
-namespace SharpPadV2.Core.Shortcuts.Usage {
+namespace VWeaponEditor.Core.Shortcuts.Usage {
     /// <summary>
     /// An interface for all shortcut "usages". Usages are used when a shortcut requires
     /// more than 1 input stroke to activate it

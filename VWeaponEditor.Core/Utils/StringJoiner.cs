@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public class StringJoiner {
         private readonly StringBuilder sb;
         private readonly string delimiter;

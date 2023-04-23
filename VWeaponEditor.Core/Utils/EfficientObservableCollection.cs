@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public class EfficientObservableCollection<T> : ObservableCollection<T> {
         /// <summary>
         /// Whether to use range actions or not. Range actions are not supported by some things (e.g. WPF CollectionView)

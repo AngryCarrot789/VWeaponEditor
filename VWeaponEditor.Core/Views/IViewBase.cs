@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.Views {
+namespace VWeaponEditor.Core.Views {
     public interface IViewBase {
 
     }

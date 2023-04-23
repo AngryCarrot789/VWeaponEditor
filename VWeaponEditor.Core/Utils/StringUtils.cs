@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public static class StringUtils {
         public static string JSubstring(this string @this, int startIndex, int endIndex) {
             return @this.Substring(startIndex, endIndex - startIndex);

@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace SharpPadV2.Core {
+namespace VWeaponEditor.Core {
     /// <summary>
     /// A simple relay command, which does not take any parameters
     /// </summary>

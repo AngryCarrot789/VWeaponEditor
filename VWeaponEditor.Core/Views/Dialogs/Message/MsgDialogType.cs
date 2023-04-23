@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.Views.Dialogs.Message {
+namespace VWeaponEditor.Core.Views.Dialogs.Message {
     public enum MsgDialogType {
         OK = 0,
         OKCancel = 1,

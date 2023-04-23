@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     /// <summary>
     /// A helper class for easily dealing with multiple exceptions that may be thrown
     /// </summary>

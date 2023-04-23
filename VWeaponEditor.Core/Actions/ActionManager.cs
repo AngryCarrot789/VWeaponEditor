@@ -2,10 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
-using SharpPadV2.Core.Actions.Contexts;
-using SharpPadV2.Core.Utils;
+using VWeaponEditor.Core.Actions.Contexts;
 
-namespace SharpPadV2.Core.Actions {
+namespace VWeaponEditor.Core.Actions {
     public class ActionManager {
         private readonly Dictionary<string, LinkedList<GlobalPresentationUpdateHandler>> updateEventMap;
 

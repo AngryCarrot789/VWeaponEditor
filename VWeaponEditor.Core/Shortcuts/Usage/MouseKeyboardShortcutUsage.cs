@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using SharpPadV2.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Inputs;
 
-namespace SharpPadV2.Core.Shortcuts.Usage {
+namespace VWeaponEditor.Core.Shortcuts.Usage {
     public class MouseKeyboardShortcutUsage : IKeyboardShortcutUsage, IMouseShortcutUsage {
         private readonly MouseKeyboardShortcut shortcut;
         // private int clickCounter;

@@ -10,7 +10,7 @@ using VWeaponEditor.Highlighting;
 using TextRange = VWeaponEditor.Highlighting.TextRange;
 
 namespace VWeaponEditor.Processes {
-    public class SearchResultInlinesConverter : IMultiValueConverter {
+    public class ProcessNameInlinesConverter : IMultiValueConverter {
         public Style NormalRunStyle { get; set; }
         public Style HighlightedRunStyle { get; set; }
 
@@ -30,18 +30,37 @@ namespace VWeaponEditor.Processes {
         }
 
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture) {
-            if (values == null || values.Length != 2) {
-                throw new Exception("Expected 2 values, got " + (values == null ? "null" : values.Length.ToString()));
+            if (values == null || values.Length != 4) {
+                throw new Exception("Expected 4 values, got " + (values == null ? "null" : values.Length.ToString()));
             }
 
             if (!(values[0] is string text)) throw new Exception("Expected values[0] to be a string, got " + values[0]);
             if (!(values[1] is IEnumerable<TextRange> ranges)) {
-                if (values[1] == null) // allow null enumerable
-                    return Enumerable.Empty<Run>();
-                throw new Exception("Expected values[1] to be IEnumerable<TextRange>, got " + values[1]);
+                if (values[1] == null) { // allow null enumerable
+                    ranges = Enumerable.Empty<TextRange>();
+                }
+                else {
+                    throw new Exception("Expected values[1] to be IEnumerable<TextRange>, got " + values[1]);
+                }
             }
 
-            return this.CreateString(text, ranges);
+            bool? isResponding = values[2] as bool?;
+            bool? isAlive = values[3] as bool?;
+
+            List<Run> runs = this.CreateString(text, ranges).ToList();
+            if (isAlive.HasValue && isAlive.Value) {
+                if (isResponding.HasValue && isResponding.Value) {
+                    return runs;
+                }
+                else {
+                    runs.Add(this.CreateNormalRun(" (Not Responding)"));
+                }
+            }
+            else {
+                runs.Add(this.CreateNormalRun(" (Dead)"));
+            }
+
+            return runs;
         }
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture) {

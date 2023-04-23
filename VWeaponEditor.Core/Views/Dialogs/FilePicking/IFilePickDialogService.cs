@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.Views.Dialogs.FilePicking {
+namespace VWeaponEditor.Core.Views.Dialogs.FilePicking {
     public interface IFilePickDialogService {
         DialogResult<string[]> ShowFilePickerDialog(string filter, string defaultPath = null, string titleBar = null, bool multiSelect = false);
 

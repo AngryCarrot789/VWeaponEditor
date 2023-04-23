@@ -1,13 +1,13 @@
 using System;
-using SharpPadV2.Core.Actions;
-using SharpPadV2.Core.Services;
-using SharpPadV2.Core.Shortcuts.Dialogs;
-using SharpPadV2.Core.Shortcuts.Managing;
-using SharpPadV2.Core.Views.Dialogs.FilePicking;
-using SharpPadV2.Core.Views.Dialogs.Message;
-using SharpPadV2.Core.Views.Dialogs.UserInputs;
+using VWeaponEditor.Core.Actions;
+using VWeaponEditor.Core.Services;
+using VWeaponEditor.Core.Shortcuts.Dialogs;
+using VWeaponEditor.Core.Shortcuts.Managing;
+using VWeaponEditor.Core.Views.Dialogs.FilePicking;
+using VWeaponEditor.Core.Views.Dialogs.Message;
+using VWeaponEditor.Core.Views.Dialogs.UserInputs;
 
-namespace SharpPadV2.Core {
+namespace VWeaponEditor.Core {
     public static class IoC {
         public static SimpleIoC Instance { get; } = new SimpleIoC();
 

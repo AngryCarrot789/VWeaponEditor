@@ -1,6 +1,6 @@
-using SharpPadV2.Core.Views.Dialogs.FilePicking;
+using VWeaponEditor.Core.Views.Dialogs.FilePicking;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public static class Filters {
         public static string NBTDatFilter = Filter.Of().
                                                    AddFilter("DAT File", "dat", "dat_old").

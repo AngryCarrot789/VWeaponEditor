@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SharpPadV2.Core.Actions;
-using SharpPadV2.Core.Actions.Contexts;
-using SharpPadV2.Core.Shortcuts.Inputs;
-using SharpPadV2.Core.Shortcuts.Usage;
+using VWeaponEditor.Core.Actions;
+using VWeaponEditor.Core.Actions.Contexts;
+using VWeaponEditor.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Usage;
 
-namespace SharpPadV2.Core.Shortcuts.Managing {
+namespace VWeaponEditor.Core.Shortcuts.Managing {
     /// <summary>
     /// A shortcut processor. This is used for each focus root (which is typically a window), and
     /// should only really be used by a single thread at a time (not designed to be thread safe)

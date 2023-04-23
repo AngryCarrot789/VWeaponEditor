@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Documents;
 using VWeaponEditor.Core.Utils;
 
-namespace VWeaponEditor.Processes {
+namespace VWeaponEditor.Highlighting {
     public static class InlineHelper {
         public static IEnumerable<Run> CreateHighlight(string text, IEnumerable<TextRange> ranges, Func<string, Run> normalRunProvider, Func<string, Run> highlightedRunProvider) {
             int lastIndex = 0;

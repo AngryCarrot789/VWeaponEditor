@@ -11,12 +11,13 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VWeaponEditor.Views;
 
 namespace VWeaponEditor.Processes {
     /// <summary>
     /// Interaction logic for ProcessSelectorWindow.xaml
     /// </summary>
-    public partial class ProcessSelectorWindow : Window {
+    public partial class ProcessSelectorWindow : BaseDialog {
         public ProcessSelectorWindow() {
             InitializeComponent();
         }

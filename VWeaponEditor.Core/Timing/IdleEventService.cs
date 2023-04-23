@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SharpPadV2.Core.Timing {
+namespace VWeaponEditor.Core.Timing {
     public class IdleEventService : IDisposable {
         public delegate void BeginActionEvent();
         public event BeginActionEvent OnIdle;
@@ -46,13 +46,12 @@ namespace SharpPadV2.Core.Timing {
                             return;
                         }
                         catch (Exception e) {
+                            Debug.WriteLine(e.ToString());
                             #if DEBUG
                             await IoC.MessageDialogs.ShowMessageAsync("Error", "An error occurred during an idle event service: " + e.Message);
                             #else
                                 // throw e;
                             #endif
-
-                            Debug.WriteLine(e.ToString());
                         }
                     }
 

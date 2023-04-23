@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SharpPadV2.Core.Views.ViewModels {
+namespace VWeaponEditor.Core.Views.ViewModels {
     /// <summary>
     /// An interface added to a view model to indicate that it wants to listen for when errors in the view have changed
     /// </summary>

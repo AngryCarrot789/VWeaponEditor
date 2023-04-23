@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace SharpPadV2.Core.Shortcuts.Serialization {
+namespace VWeaponEditor.Core.Shortcuts.Serialization {
     [XmlRoot("KeyMap")]
     public class KeyMap : Group {
 

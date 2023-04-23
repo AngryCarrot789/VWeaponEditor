@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using SharpPadV2.Core.Shortcuts.Inputs;
-using SharpPadV2.Core.Shortcuts.Usage;
+using VWeaponEditor.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Usage;
 
-namespace SharpPadV2.Core.Shortcuts {
+namespace VWeaponEditor.Core.Shortcuts {
     /// <summary>
     /// The base class for all shortcuts
     /// </summary>

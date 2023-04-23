@@ -1,6 +1,6 @@
-using SharpPadV2.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Inputs;
 
-namespace SharpPadV2.Core.Shortcuts.Usage {
+namespace VWeaponEditor.Core.Shortcuts.Usage {
     public interface IMouseShortcutUsage : IShortcutUsage {
         /// <summary>
         /// A reference to the shortcut that created this instance

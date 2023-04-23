@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using SharpPadV2.Core.Shortcuts.Managing;
-using SharpPadV2.Core.Utils;
+using VWeaponEditor.Core.Shortcuts.Managing;
+using VWeaponEditor.Core.Utils;
 
-namespace SharpPadV2.Core.Shortcuts.ViewModels {
+namespace VWeaponEditor.Core.Shortcuts.ViewModels {
     public class ShortcutGroupViewModel : BaseShortcutItemViewModel {
         private readonly EfficientObservableCollection<BaseShortcutItemViewModel> children;
 

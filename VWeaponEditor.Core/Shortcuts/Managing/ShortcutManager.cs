@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using SharpPadV2.Core.Shortcuts.Inputs;
+using VWeaponEditor.Core.Shortcuts.Inputs;
 
-namespace SharpPadV2.Core.Shortcuts.Managing {
+namespace VWeaponEditor.Core.Shortcuts.Managing {
     /// <summary>
     /// A class for storing and managing shortcuts
     /// </summary>

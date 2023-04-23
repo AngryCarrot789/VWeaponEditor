@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using SharpPadV2.Core.Actions;
-using SharpPadV2.Core.AdvancedContextService.Base;
-using SharpPadV2.Core.Utils;
+using VWeaponEditor.Core.Actions;
+using VWeaponEditor.Core.AdvancedContextService.Base;
+using VWeaponEditor.Core.Utils;
 
-namespace SharpPadV2.Core.AdvancedContextService.Actions {
+namespace VWeaponEditor.Core.AdvancedContextService.Actions {
     public class CheckableActionContextEntry : ActionContextEntry {
         private bool isChecked;
         public bool IsChecked {

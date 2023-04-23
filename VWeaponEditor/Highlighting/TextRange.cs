@@ -1,4 +1,4 @@
-namespace VWeaponEditor.Processes {
+namespace VWeaponEditor.Highlighting {
     public readonly struct TextRange {
         public int Index { get; }
 

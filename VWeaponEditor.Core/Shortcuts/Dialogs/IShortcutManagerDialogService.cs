@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.Shortcuts.Dialogs {
+namespace VWeaponEditor.Core.Shortcuts.Dialogs {
     public interface IShortcutManagerDialogService {
         bool IsOpen { get; }
 

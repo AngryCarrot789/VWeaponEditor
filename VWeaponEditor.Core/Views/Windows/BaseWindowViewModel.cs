@@ -1,4 +1,4 @@
-namespace SharpPadV2.Core.Views.Windows {
+namespace VWeaponEditor.Core.Views.Windows {
     public class BaseWindowViewModel : BaseViewModel {
         public IWindow Window { get; set; }
 

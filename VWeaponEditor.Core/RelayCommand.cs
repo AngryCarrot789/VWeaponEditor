@@ -1,6 +1,6 @@
 using System;
 
-namespace SharpPadV2.Core {
+namespace VWeaponEditor.Core {
     public class RelayCommand : BaseRelayCommand {
         private readonly Action execute;
         private readonly Func<bool> canExecute;

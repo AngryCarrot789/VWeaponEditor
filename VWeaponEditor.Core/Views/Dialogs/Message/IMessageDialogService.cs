@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace SharpPadV2.Core.Views.Dialogs.Message {
+namespace VWeaponEditor.Core.Views.Dialogs.Message {
     public interface IMessageDialogService {
         Task ShowMessageAsync(string caption, string message);
 

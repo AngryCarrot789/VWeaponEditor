@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public static class ExceptionUtils {
         private const String CAUSE_CAPTION = "Caused By: ";
         private const String SUPPRESSED_CAPTION = "Suppressed: ";

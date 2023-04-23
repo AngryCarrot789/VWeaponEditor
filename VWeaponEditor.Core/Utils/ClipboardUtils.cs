@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace SharpPadV2.Core.Utils {
+namespace VWeaponEditor.Core.Utils {
     public static class ClipboardUtils {
         public static async Task<bool> SetClipboardOrShowErrorDialog(string text) {
             if (IoC.Clipboard == null) {

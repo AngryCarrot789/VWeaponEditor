@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>86faa8c9-9547-4ae3-969a-bcdd0df64d50</ProjectGuid>
+    <ProjectGuid>{7D3C02CC-A761-4F23-9657-A68636CE2756}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VWeaponEditor.Core</RootNamespace>
     <AssemblyName>VWeaponEditor.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -31,24 +31,114 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Actions\ActionManager.cs" />
+    <Compile Include="Actions\ActionRegistrationAttribute.cs" />
+    <Compile Include="Actions\AnAction.cs" />
+    <Compile Include="Actions\AnActionEventArgs.cs" />
+    <Compile Include="Actions\Contexts\DataContext.cs" />
+    <Compile Include="Actions\Contexts\IDataContext.cs" />
+    <Compile Include="Actions\GlobalPresentationUpdateHandler.cs" />
+    <Compile Include="Actions\LambdaAction.cs" />
+    <Compile Include="Actions\Presentation.cs" />
+    <Compile Include="Actions\ToggleAction.cs" />
+    <Compile Include="AdvancedContextService\Actions\ActionContextEntry.cs" />
+    <Compile Include="AdvancedContextService\Actions\CheckableActionContextEntry.cs" />
+    <Compile Include="AdvancedContextService\Base\BaseInteractableEntry.cs" />
+    <Compile Include="AdvancedContextService\Base\ContextEntry.cs" />
+    <Compile Include="AdvancedContextService\Base\IContextEntry.cs" />
+    <Compile Include="AdvancedContextService\Commands\CheckableCommandContextEntry.cs" />
+    <Compile Include="AdvancedContextService\Commands\CommandContextEntry.cs" />
+    <Compile Include="AdvancedContextService\ContextEntrySeparator.cs" />
+    <Compile Include="AdvancedContextService\IContextProvider.cs" />
+    <Compile Include="AsyncRelayCommand.cs" />
+    <Compile Include="BaseAsyncRelayCommand.cs" />
+    <Compile Include="BaseRelayCommand.cs" />
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Interactivity\FileDropType.cs" />
+    <Compile Include="Interactivity\IFileDropNotifier.cs" />
+    <Compile Include="IoC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="Services\IClipboardService.cs" />
+    <Compile Include="Services\IDispatcher.cs" />
+    <Compile Include="Services\IExplorerService.cs" />
+    <Compile Include="Shortcuts\Dialogs\IKeyboardDialogService.cs" />
+    <Compile Include="Shortcuts\Dialogs\IMouseDialogService.cs" />
+    <Compile Include="Shortcuts\Dialogs\IShortcutManagerDialogService.cs" />
+    <Compile Include="Shortcuts\IKeyboardShortcut.cs" />
+    <Compile Include="Shortcuts\IMouseShortcut.cs" />
+    <Compile Include="Shortcuts\Inputs\IInputStroke.cs" />
+    <Compile Include="Shortcuts\Inputs\InputStrokeSet.cs" />
+    <Compile Include="Shortcuts\Inputs\KeyStroke.cs" />
+    <Compile Include="Shortcuts\Inputs\MouseStroke.cs" />
+    <Compile Include="Shortcuts\IShortcut.cs" />
+    <Compile Include="Shortcuts\KeyboardShortcut.cs" />
+    <Compile Include="Shortcuts\Managing\GroupedShortcut.cs" />
+    <Compile Include="Shortcuts\Managing\ShortcutGroup.cs" />
+    <Compile Include="Shortcuts\Managing\ShortcutManager.cs" />
+    <Compile Include="Shortcuts\Managing\ShortcutProcessor.cs" />
+    <Compile Include="Shortcuts\MouseKeyboardShortcut.cs" />
+    <Compile Include="Shortcuts\MouseShortcut.cs" />
+    <Compile Include="Shortcuts\Serialization\KeyMapDeserialiser.cs" />
+    <Compile Include="Shortcuts\Serialization\XMLKeyMap.cs" />
+    <Compile Include="Shortcuts\Usage\IKeyboardShortcutUsage.cs" />
+    <Compile Include="Shortcuts\Usage\IMouseShortcutUsage.cs" />
+    <Compile Include="Shortcuts\Usage\IShortcutUsage.cs" />
+    <Compile Include="Shortcuts\Usage\KeyboardShortcutUsage.cs" />
+    <Compile Include="Shortcuts\Usage\MouseKeyboardShortcutUsage.cs" />
+    <Compile Include="Shortcuts\Usage\MouseShortcutUsage.cs" />
+    <Compile Include="Shortcuts\ViewModels\BaseShortcutItemViewModel.cs" />
+    <Compile Include="Shortcuts\ViewModels\InputStrokeViewModel.cs" />
+    <Compile Include="Shortcuts\ViewModels\ShortcutGroupViewModel.cs" />
+    <Compile Include="Shortcuts\ViewModels\ShortcutManagerViewModel.cs" />
+    <Compile Include="Shortcuts\ViewModels\ShortcutViewModel.cs" />
+    <Compile Include="SimpleIoC.cs" />
+    <Compile Include="TextEditor\ITextEditor.cs" />
+    <Compile Include="Timing\IdleEventService.cs" />
+    <Compile Include="Timing\TimedInputUpdateViewModel.cs" />
+    <Compile Include="Utils\Arrays.cs" />
+    <Compile Include="Utils\Bits.cs" />
+    <Compile Include="Utils\BoolBox.cs" />
+    <Compile Include="Utils\ClipboardUtils.cs" />
+    <Compile Include="Utils\CollectionUtils.cs" />
+    <Compile Include="Utils\EfficientObservableCollection.cs" />
+    <Compile Include="Utils\EventArgsCache.cs" />
+    <Compile Include="Utils\ExceptionStack.cs" />
+    <Compile Include="Utils\ExceptionUtils.cs" />
+    <Compile Include="Utils\Filters.cs" />
+    <Compile Include="Utils\Maths.cs" />
+    <Compile Include="Utils\Singleton.cs" />
+    <Compile Include="Utils\StringJoiner.cs" />
+    <Compile Include="Utils\StringUtils.cs" />
+    <Compile Include="Views\Dialogs\BaseConfirmableDialogViewModel.cs" />
+    <Compile Include="Views\Dialogs\BaseDialogResult.cs" />
+    <Compile Include="Views\Dialogs\BaseDialogViewModel.cs" />
+    <Compile Include="Views\Dialogs\DialogResult.cs" />
+    <Compile Include="Views\Dialogs\FilePicking\Filter.cs" />
+    <Compile Include="Views\Dialogs\FilePicking\IFilePickDialogService.cs" />
+    <Compile Include="Views\Dialogs\IDialog.cs" />
+    <Compile Include="Views\Dialogs\Message\IMessageDialogService.cs" />
+    <Compile Include="Views\Dialogs\Message\MsgDialogResult.cs" />
+    <Compile Include="Views\Dialogs\Message\MsgDialogType.cs" />
+    <Compile Include="Views\Dialogs\UserInputs\DoubleInputViewModel.cs" />
+    <Compile Include="Views\Dialogs\UserInputs\InputValidator.cs" />
+    <Compile Include="Views\Dialogs\UserInputs\IUserInputDialogService.cs" />
+    <Compile Include="Views\Dialogs\UserInputs\SingleInputViewModel.cs" />
+    <Compile Include="Views\IViewBase.cs" />
+    <Compile Include="Views\ViewModels\IErrorInfoHandler.cs" />
+    <Compile Include="Views\ViewModels\IHasErrorInfo.cs" />
+    <Compile Include="Views\Windows\BaseWindowViewModel.cs" />
+    <Compile Include="Views\Windows\IWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

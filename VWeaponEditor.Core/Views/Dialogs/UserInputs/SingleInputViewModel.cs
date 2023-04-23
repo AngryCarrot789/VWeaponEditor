@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SharpPadV2.Core.Views.ViewModels;
+using VWeaponEditor.Core.Views.ViewModels;
 
-namespace SharpPadV2.Core.Views.Dialogs.UserInputs {
+namespace VWeaponEditor.Core.Views.Dialogs.UserInputs {
     public class SingleInputViewModel : BaseConfirmableDialogViewModel, IErrorInfoHandler {
         private string title;
         public string Title {

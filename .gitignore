@@ -1,0 +1,12 @@
+﻿/VWeaponEditor/bin/
+/VWeaponEditor/obj/
+/VWeaponEditor.Avalonia/bin/
+/VWeaponEditor.Avalonia/obj/
+/VWeaponEditor.Comms/bin/
+/VWeaponEditor.Comms/obj/
+/VWeaponEditor.SHVDN3/bin/
+/VWeaponEditor.SHVDN3/obj/
+/.git
+/.idea
+/.vs
+/VWeaponEditor.sln.DotSettings.user

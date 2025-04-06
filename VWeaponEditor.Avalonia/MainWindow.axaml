@@ -1,0 +1,40 @@
+<c:WindowEx xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:nd="clr-namespace:PFXToolKitUI.Avalonia.AvControls.Dragger;assembly=PFXToolKitUI.Avalonia"
+        xmlns:c="clr-namespace:PFXToolKitUI.Avalonia.Themes.Controls;assembly=PFXToolKitUI.Avalonia"
+        mc:Ignorable="d" Width="800" Height="450"
+        x:Class="VWeaponEditor.Avalonia.MainWindow"
+        Title="VVWeaponEditor">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Open Process..." Click="OpenProcess_MenuItemClick"/>
+            </MenuItem>
+        </Menu>
+        <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="200,5,*" x:Name="PART_EditorPanel">
+            <TextBlock          Grid.Row="0" Grid.Column="0" Padding="5" Text="Reload Time (SP)"/>
+            <TextBlock          Grid.Row="1" Grid.Column="0" Padding="5" Text="Reload Time (MP)"/>
+            <TextBlock          Grid.Row="2" Grid.Column="0" Padding="5" Text="Vehicle Reload Time"/>
+            <TextBlock          Grid.Row="3" Grid.Column="0" Padding="5" Text="Anim Reload Time"/>
+            <TextBlock          Grid.Row="4" Grid.Column="0" Padding="5" Text="Bullets per anim loop"/>
+            <TextBlock          Grid.Row="5" Grid.Column="0" Padding="5" Text="Time Between Shots"/>
+            <TextBlock          Grid.Row="6" Grid.Column="0" Padding="5" Text="Spin-up time"/>
+            <TextBlock          Grid.Row="7" Grid.Column="0" Padding="5" Text="Spin-down time"/>
+            <TextBlock          Grid.Row="8" Grid.Column="0" Padding="5" Text="Alternate Wait Time"/>
+            <TextBlock          Grid.Row="9" Grid.Column="0" Padding="5" Text="Range"/>
+            
+            <nd:NumberDragger   x:Name="PART_ReloadTimeSP"       Grid.Row="0" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_ReloadTimeMP"       Grid.Row="1" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_VehicleReloadTime"  Grid.Row="2" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_AnimReloadTime"     Grid.Row="3" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_BulletsPerAnimLoop" Grid.Row="4" Grid.Column="2" Minimum="0" Maximum="1000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_TimeBetweenShots"   Grid.Row="5" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_SpinUpTime"         Grid.Row="6" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_SpinDownTime"       Grid.Row="7" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_AltWaitTime"        Grid.Row="8" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+            <nd:NumberDragger   x:Name="PART_Range"              Grid.Row="9" Grid.Column="2" Minimum="0" Maximum="10000" Value="0.1" TinyChange="0.001" SmallChange="0.01" NormalChange="0.05" LargeChange="0.1"/>
+        </Grid>
+    </DockPanel>
+</c:WindowEx>

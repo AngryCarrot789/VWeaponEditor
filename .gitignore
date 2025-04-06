@@ -6,6 +6,16 @@
 /VWeaponEditor.Comms/obj/
 /VWeaponEditor.SHVDN3/bin/
 /VWeaponEditor.SHVDN3/obj/
+/JetPacketSystem/obj/
+/JetPacketSystem/bin/
+/JetPacketSystem.Sockets/bin/
+/JetPacketSystem.Sockets/obj/
+/JetPacketSystem.Tests/bin/
+/JetPacketSystem.Tests/obj
+/JetPacketSystem.Tests/obj/
+/JetPacketSystem.Tests/obj/*
+/JetPacketSystem.Tests/obj/**
+/JetPacketSystem.Tests/config/
 /.git
 /.idea
 /.vs

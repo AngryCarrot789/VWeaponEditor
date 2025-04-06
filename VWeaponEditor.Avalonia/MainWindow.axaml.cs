@@ -1,18 +1,20 @@
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Avalonia.Controls;
 using Avalonia.Interactivity;
 using PFXToolKitUI;
 using PFXToolKitUI.Avalonia.Themes.Controls;
+using PFXToolKitUI.Utils;
 using PFXToolKitUI.Utils.Commands;
 using VWeaponEditor.Avalonia.MemoryUtils;
+using VWeaponEditor.Comms;
 using VWeaponEditor.Processes;
 
 namespace VWeaponEditor.Avalonia;
 
 public partial class MainWindow : WindowEx {
     private readonly AsyncRelayCommand openProcessCommand;
+    private readonly AsyncRelayCommand connectScriptCommand;
     private Mem64? mem;
     private IntPtr addr_of_world;
     private IntPtr addr_of_weapon_manager;
@@ -21,9 +23,13 @@ public partial class MainWindow : WindowEx {
     private Task updateTask;
     private bool isRefreshingValues;
 
+    public ScriptNetworkManager ScriptNetworkManager { get; } = new ScriptNetworkManager();
+
     public MainWindow() {
         this.InitializeComponent();
-
+        
+        VWEPacketRegistry.RegisterApplicationPackets();
+        
         this.PART_ReloadTimeSP.ValueFinalized += (s,a) => { if (!this.isRefreshingValues && this.mem != null) WeaponInfo.reload_time_sp(this.mem, Mem64.Dereference(this.mem.ProcessHandle, this.addr_of_curr_veh_wpn_inf), (float) this.PART_ReloadTimeSP.Value); }; 
         this.PART_ReloadTimeMP.ValueFinalized += (s,a) => { if (!this.isRefreshingValues && this.mem != null) WeaponInfo.reload_time_mp(this.mem, Mem64.Dereference(this.mem.ProcessHandle, this.addr_of_curr_veh_wpn_inf), (float) this.PART_ReloadTimeMP.Value); }; 
         this.PART_VehicleReloadTime.ValueFinalized += (s,a) => { if (!this.isRefreshingValues && this.mem != null) WeaponInfo.vehicle_reload_time(this.mem, Mem64.Dereference(this.mem.ProcessHandle, this.addr_of_curr_veh_wpn_inf), (float) this.PART_VehicleReloadTime.Value); }; 
@@ -75,6 +81,10 @@ public partial class MainWindow : WindowEx {
                 }
             });
         });
+        
+        this.connectScriptCommand = new AsyncRelayCommand(async () => {
+            await this.ScriptNetworkManager.ConnectAsync();
+        });
     }
 
     private void RefreshUI() {
@@ -105,6 +115,11 @@ public partial class MainWindow : WindowEx {
             
             // float awt = WeaponInfo.alternate_wait_time(info);
             this.isRefreshingValues = true;
+            this.ScriptNetworkManager.CurrentVehicleHash = (int) WeaponInfo.human_name_hash(info);
+            
+            // this is updated every 1 second
+            this.PART_WeaponName.Text = string.IsNullOrEmpty(this.ScriptNetworkManager.CurrentVehicleName) ? "<no vehicle weapon>" : this.ScriptNetworkManager.CurrentVehicleName; 
+            
             if (!this.PART_ReloadTimeSP.IsEditing && !this.PART_ReloadTimeSP.IsDragging)
                 this.PART_ReloadTimeSP.Value = WeaponInfo.reload_time_sp(info);
             if (!this.PART_ReloadTimeMP.IsEditing && !this.PART_ReloadTimeMP.IsDragging)
@@ -131,5 +146,9 @@ public partial class MainWindow : WindowEx {
 
     private void OpenProcess_MenuItemClick(object? sender, RoutedEventArgs e) {
         this.openProcessCommand.Execute(null);
+    }
+    
+    private void ConnectScript_MenuItemClick(object? sender, RoutedEventArgs e) {
+        this.connectScriptCommand.Execute(null);
     }
 }
